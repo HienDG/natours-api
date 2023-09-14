@@ -1,0 +1,45 @@
+{
+	"env": {
+		"browser": true,
+		"es2021": true
+	},
+	"extends": [
+		"standard-with-typescript",
+		"eslint:recommended",
+		"plugin:@typescript-eslint/recommended",
+		"prettier",
+		"plugin:prettier/recommended"
+	],
+	"overrides": [],
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaVersion": "latest",
+		"sourceType": "module"
+	},
+	"ignorePatterns": ["jest.config.js"],
+	"plugins": ["@typescript-eslint", "prettier", "jest"],
+	"rules": {
+		"prettier/prettier": [
+			"error",
+			{
+				"endOfLine": "auto"
+			}
+		],
+		"quotes": ["error", "double"],
+		"semi": ["error", "always"],
+		"@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "req|res|next|val" }],
+		"@typescript-eslint/no-explicit-any": "error",
+		"no-unused-labels": "error",
+		"no-console": ["error", { "allow": ["error", "warn", "info", "debug"] }],
+		"no-catch-shadow": "error",
+		"no-dupe-args": "error",
+		"prefer-const": "error",
+		"prefer-destructuring": ["error", { "object": true, "array": false }],
+
+		"jest/no-disabled-tests": "warn",
+		"jest/no-focused-tests": "error",
+		"jest/no-identical-title": "error",
+		"jest/prefer-to-have-length": "warn",
+		"jest/valid-expect": "error"
+	}
+}
